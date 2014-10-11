@@ -21,6 +21,7 @@ img{
 	margin-left: 200px;
 	margin-right: 200px;
 }
+
 .navbar-brand{
 	float: left;
 	height: 50px;
@@ -31,4 +32,25 @@ img{
 a#btn_home, a#btn_about{
 	margin-bottom: 2px solid;
 	color: black;
+	margin-bottom: 2px solid;
+	color: black;
+	margin-left: 25px;
+}
+div#pesquisa{
+	float: right;
+	margin-top: 25px;
+	border-radius: 4px;
+	width: 258px;
+}
+.btn_ipt{
+	border-radius: 5px;
+}
+
+footer{		
+	position:absolute;
+	bottom: 0px;
+	width:100%;
+	color: white;
+	text-align: center;
+	background-color: #A95A5A;
 }

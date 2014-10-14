@@ -54,28 +54,22 @@
 		<div id='nav'>
 			<img id='img_nav' alt="30px" src="./img/query_64.png">
 				<label style="font-size: 52px">uery</label>
-        			<ul class="pull-right">
-        			<li class="dropdown">
         			<a id="btn_home">Home</a>
-        			<a id="new_qst" style="color:black;" class="dropdown-toggle" href="#" data-toggle="dropdown">Nova pergunta</a>
-            <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
-            <form action="[YOUR ACTION]" method="post" accept-charset="UTF-8">
-				  <input id="title_qst" style="margin-bottom: 15px; width:700px;" type="text" name="titulo[pergunta]" placeholder="Titulo da pergunta" />
-				  <textarea id="desc_qst" rows="2" style="margin-bottom: 15px; width:700px; max-width:700px; max-heigth: 100px;" type="text" name="descricao[pergunta]" placeholder="Descrição"></textarea>
-				  <input class="btn btn-danger" style="clear: left; width: 100%; height: 32px; font-size: 13px;" type="submit" name="commit" value="Perguntar" />
-				</form>
-            </div>
-            
-          </li>
-          </ul>
-          
-          
-				<div id="pesquisa">
+        			<a id="btn_home">Sobre</a>
+     			<div id="pesquisa">
 					<input class="btn_ipt" type="text" placeholder="Pergunta">	
         			<button class="btn_ipt" type="submit">Pesquisar</button>
         		</div>
 		</div>
 	</nav>
+	 	<div id="new_qst">
+            <form action="[YOUR ACTION]" method="post" accept-charset="UTF-8">
+				  <input id="title_qst" style="margin-left: 50px;margin-top: 5px; width:700px;" type="text" name="titulo[pergunta]" placeholder="Titulo da pergunta" />
+				  <textarea id="desc_qst" rows="2" style="margin-left: 50px;margin-top: 5px; width:700px; max-width:700px; max-heigth: 100px;" type="text" name="descricao[pergunta]" placeholder="Descrição"></textarea>
+				  <input class="btn btn-danger" style="clear: left; width: 100px; height: 32px; font-size: 13px;" type="submit" name="commit" value="Perguntar" />
+				</form>
+		</div>            
+            
 	<div id="corpo">
 		<div id="questao" class="list-group-item">
 			<img alt="30px" src="./img/query.png">

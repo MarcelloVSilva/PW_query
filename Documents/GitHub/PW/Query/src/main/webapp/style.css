@@ -79,7 +79,10 @@ footer{
 	color:black;
 }
 #new_qst{
-	
+	margin-left:250px;
+	margin-right: 250px;
+	margin-top: 5px;
+	background-color:#A95A5A;
 }
 
 #dropdown-menu-registro {

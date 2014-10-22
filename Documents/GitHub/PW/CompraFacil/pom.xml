@@ -19,7 +19,7 @@
 				<artifactId>tomcat7-maven-plugin</artifactId>
 				<version>2.2</version>
 				<configuration>
-					<port>8080</port>
+					<port>8090</port>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -30,7 +30,6 @@
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
 			<version>3.1.0</version>
-			<!-- Essa biblioteca não será "enviada" para o servidor de aplicação. -->
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>

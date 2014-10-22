@@ -1,0 +1,27 @@
+body{
+	margin:0;
+	background-color:#CD5C5C;
+}
+#start{
+	margin-top:150px;
+	height:200px;
+	opacity: 0.8;
+	background-color:white;
+	padding-top:60px;
+}
+#start_one{
+	height:150px;
+	width:150px;
+	border-radius:88px;
+	background-color: #00ff00;
+	margin-left:555px;
+	line-height:140px;
+}
+#start_new{
+	color:black;
+	margin-left:25px;
+}
+#start :hover{
+	cursor: pointer;
+	background-color:#00c100;
+}

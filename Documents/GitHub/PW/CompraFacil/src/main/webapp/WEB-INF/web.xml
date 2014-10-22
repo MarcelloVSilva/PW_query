@@ -2,11 +2,21 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
   <display-name>CompraFacil</display-name>
   <welcome-file-list>
-  	<welcome-file>login.jsp</welcome-file>
+    <welcome-file>login.jsp</welcome-file>
     <welcome-file>index.htm</welcome-file>
     <welcome-file>index.jsp</welcome-file>
     <welcome-file>default.html</welcome-file>
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>CadastroPedido</display-name>
+    <servlet-name>CadastroPedido</servlet-name>
+    <servlet-class>br.com.servlets.CadastroPedido</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CadastroPedido</servlet-name>
+    <url-pattern>/CadastroPedido</url-pattern>
+  </servlet-mapping>
 </web-app>

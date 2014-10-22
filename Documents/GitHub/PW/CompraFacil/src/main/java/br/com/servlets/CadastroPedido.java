@@ -8,32 +8,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/logado")
-public class Login extends HttpServlet {
+@WebServlet("/pedido")
+public class CadastroPedido extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-   
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 	}
 
-
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String usuario = request.getParameter("user");
-		String senha = request.getParameter("senha");
-		
-		Boolean login = validaLogin(usuario, senha);
-		
-		if(login){
-			request.getRequestDispatcher("home.html").forward(request, response);
+		String cliente = request.getParameter("cliente");
+		if(cliente.equals("gabi")){
+			request.getRequestDispatcher("home.html");
 		}
-	}
-	
-	public boolean validaLogin(String user, String senha){
-		if(user.equals("func") && senha.equals("func")){
-			return true;
-		}
-		return false;
+		else
+			request.getRequestDispatcher("login.jsp");
 	}
 
 }

@@ -14,7 +14,7 @@
 	<div id="start">
 	<form action="pedido" method="post" id="form">
 	<input name="cliente" class="form-control focus" type="text" placeholder="Nome do Cliente" ></br>
-		<button type="button" style="float: right;" class="btn btn-default">Ok</button>
+		<button type="button" style="float: right;" class="btn btn-default">Iniciar</button>
 	</form>
 	</div>
 	

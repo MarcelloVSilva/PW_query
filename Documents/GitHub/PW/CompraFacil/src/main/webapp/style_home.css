@@ -13,15 +13,16 @@ body{
 	height:150px;
 	width:150px;
 	border-radius:88px;
-	background-color: #00ff00;
-	margin-left:555px;
+	background-color: #ED7639;	
+	margin-left:600px;
 	line-height:140px;
 }
 #start_new{
 	color:black;
-	margin-left:25px;
+	text-decoration: none;
+	margin-left:34px;
 }
 #start :hover{
 	cursor: pointer;
-	background-color:#00c100;
+	background-color:#96843d;
 }

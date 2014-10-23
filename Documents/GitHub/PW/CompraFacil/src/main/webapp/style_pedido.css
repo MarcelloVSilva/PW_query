@@ -4,13 +4,17 @@ body{
 }
 #start{
 	margin-top:150px;
-	height:200px;
-	background-opacity: 0.8;
+	height:260px;
 	background-color:white;
-	padding-top:60px;
+	opacity: 0.9;
+	padding-top:48px;
 }
 #form{
-	background-color:;
+	border: 3px solid;
+	background-color: gray;
+	opacity: 0.9;
 	width:400px;
-	margin-left:450px;
+	margin-left:510px;
+	padding:40px;
+	padding-bottom: 70px;
 }

@@ -14,7 +14,8 @@
 	<div id="start">
 	<form action="pedido" method="post" id="form">
 	<input name="cliente" class="form-control focus" type="text" placeholder="Nome do Cliente" ></br>
-		<button type="button" style="float: right;" class="btn btn-default">Iniciar</button>
+		<a href="home.html" type="button" style="float: right;" class="btn btn-default">Cancelar</a>
+		<a href="Compra.jsp" type="button" style="float: right;" class="btn btn-default">Iniciar</a>
 	</form>
 	</div>
 	

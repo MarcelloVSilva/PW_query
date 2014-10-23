@@ -18,11 +18,9 @@ public class CadastroPedido extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String cliente = request.getParameter("cliente");
-		if(cliente.equals("gabi")){
-			request.getRequestDispatcher("home.html");
+		if(!cliente.equals("")){
+			request.getRequestDispatcher("Compra.html");
 		}
-		else
-			request.getRequestDispatcher("login.jsp");
 	}
 
 }

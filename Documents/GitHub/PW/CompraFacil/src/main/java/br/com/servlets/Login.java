@@ -24,16 +24,22 @@ public class Login extends HttpServlet {
 		
 		Boolean login = validaLogin(usuario, senha);
 		
-		if(login){
-			request.getRequestDispatcher("home.html").forward(request, response);
+		if(!login){
+			request.setAttribute("falha ao conectar", "erro de autenticação");
+			request.getRequestDispatcher("login.jsp").forward(request, response);
+			
 		}
+		else
+			request.getRequestDispatcher("home.html").forward(request, response);
 	}
 	
 	public boolean validaLogin(String user, String senha){
 		if(user.equals("func") && senha.equals("func")){
 			return true;
 		}
-		return false;
+		else
+			return false;
+
 	}
 
 }

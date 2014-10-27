@@ -25,7 +25,7 @@ public class Login extends HttpServlet {
 		Boolean login = validaLogin(usuario, senha);
 		
 		if(!login){
-			request.setAttribute("falha ao conectar", "erro de autenticação");
+			request.setAttribute("falha", "Usuário e/ou senha incorretos");
 			request.getRequestDispatcher("login.jsp").forward(request, response);
 			
 		}

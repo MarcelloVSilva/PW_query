@@ -13,16 +13,25 @@
 <body style="background-image: url('imagens/moca.jpg');">
 <div id="start">
 	<img height="50%" src='imagens/camisa1.jpg' draggable="true"/>
+	<label>49,90</label>
 	<img height="50%" src='imagens/camisa2.jpg' draggable="true"/>
+	<label>49,90</label>
 	<img height="50%" src='imagens/camisa1.jpg' draggable="true"/>
+	<label>49,90</label>
 	<img height="50%" src='imagens/camisa2.jpg' draggable="true"/>
+	<label>49,90</label>
 	<img height="50%" src='imagens/camisa2.jpg' draggable="true"/>
+	<label>49,90</label>
 	<img height="50%" src='imagens/camisa1.jpg' draggable="true"/>
+	<label>49,90</label>
 	<img height="50%" src='imagens/camisa2.jpg' draggable="true"/>
+	<label>49,90</label>
 	<img height="50%" src='imagens/camisa1.jpg' draggable="true"/>
+	<label>49,90</label>
 	</div>
 	<div id="carrinho">
+	<a id="cancela_compra" href="home.html">Cancelar compra</a>
 	</div>
-
+<a class="btn-primary" href="login.jsp">logout</a>
 </body>
 </html>

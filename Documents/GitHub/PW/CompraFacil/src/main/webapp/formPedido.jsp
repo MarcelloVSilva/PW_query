@@ -17,6 +17,7 @@
 		<a href="home.html" type="button" style="float: right;" class="btn btn-default">Cancelar</a>
 		<a href="Compra.jsp" type="button" style="float: right;" class="btn btn-default">Iniciar</a>
 	</form>
+	<a href="login.jsp">logout</a>
 	</div>
 	
 </body>

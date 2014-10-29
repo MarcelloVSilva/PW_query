@@ -9,8 +9,16 @@
 <link rel="stylesheet" href="style_compra.css">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+
+
 </head>
 <body style="background-image: url('imagens/moca.jpg');">
+<!--Aqui está o codigo java que pega a sessao contendo o nome do funcionario logado-->
+<%
+String user=(String) session.getAttribute("user");
+session.getAttribute(user);
+String cliente=(String) session.getAttribute("cliente");
+session.getAttribute(cliente);%>
 <div id="start">
 	<img height="50%" src='imagens/camisa1.jpg' draggable="true"/>
 	<label>49,90</label>
@@ -30,8 +38,12 @@
 	<label>49,90</label>
 	</div>
 	<div id="carrinho">
+	<p>Funcionario:  <%=user%>   <p>
+	<p>Cliente:  <%=cliente%>   <p>
 	<a id="cancela_compra" href="home.html">Cancelar compra</a>
 	</div>
 <a class="btn-primary" href="login.jsp">logout</a>
+
+
 </body>
 </html>

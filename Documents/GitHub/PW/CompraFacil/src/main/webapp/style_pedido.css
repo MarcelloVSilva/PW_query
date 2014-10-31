@@ -18,3 +18,18 @@ body{
 	padding:40px;
 	padding-bottom: 70px;
 }
+#logout{
+	background-color:#ed8223;
+	color:#fff;
+	background-color: #ed8223;
+	color: #fff;
+	font-family: 'Helvetica Neue',sans-serif;
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border: 0;
+	text-shadow: #C17C3A 0 -1px 0;
+	width: 116px;
+	height: 71px;
+	text-decoration: none;
+}

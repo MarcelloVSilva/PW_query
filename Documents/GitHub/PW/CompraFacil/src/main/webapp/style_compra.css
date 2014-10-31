@@ -17,3 +17,18 @@ body{
 	width:305px;
 	background-color:white;
 }
+#logout{
+	background-color:#ed8223;
+	color:#fff;
+	background-color: #ed8223;
+	color: #fff;
+	font-family: 'Helvetica Neue',sans-serif;
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border: 0;
+	text-shadow: #C17C3A 0 -1px 0;
+	text-decoration: none;
+	float: right;
+	margin-bottom: 0px;
+}

@@ -41,9 +41,7 @@ session.getAttribute(cliente);%>
 	<p>Funcionario:  <%=user%>   <p>
 	<p>Cliente:  <%=cliente%>   <p>
 	<a id="cancela_compra" href="home.html">Cancelar compra</a>
+	<a id="logout" href="login.jsp">logout</a>
 	</div>
-<a class="btn-primary" href="login.jsp">logout</a>
-
-
 </body>
 </html>

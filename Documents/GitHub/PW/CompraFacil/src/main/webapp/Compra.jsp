@@ -12,9 +12,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 
+<script>
+ var myItem = simpleCart.add({ name: "Cool Thing" , price: 4, quantity: 1 });
 
+simpleCart.quantity(); // 1
+
+myItem.remove();
+
+simpleCart.quantity(); // 0
+
+</script>
 </head>
-<body style="background-image: url('imagenss/moca.jpg');">
+<body style="background-image: url('imagens/moca.jpg');">
 <!--Aqui está o codigo java que pega a sessao contendo o nome do funcionario logado-->
 <%
 String user=(String) session.getAttribute("user");
@@ -36,7 +45,7 @@ session.getAttribute(cliente);%>
   </div>
   <div id="start" class="simpleCart_shelfItem addDemoAnimation">
 		<div class="tooltip">
-			<span class="item_price">$35.99</span>
+			<span class="item_price">$45.99</span>
  			<a class="item_add" href="javascript:;"> Add to Cart </a>
 		</div>
 	<img height="50%" src='imagens/camisa1.jpg'  alt="Sample Product" class="item_image item_add"/>
@@ -52,7 +61,7 @@ session.getAttribute(cliente);%>
   </div>
   <div id="start" class="simpleCart_shelfItem addDemoAnimation">
 		<div class="tooltip">
-			<span class="item_price">$35.99</span>
+			<span class="item_price">$45.99</span>
  			<a class="item_add" href="javascript:;"> Add to Cart </a>
 		</div>
 	<img height="50%" src='imagens/camisa1.jpg'  alt="Sample Product" class="item_image item_add"/>
@@ -68,7 +77,7 @@ session.getAttribute(cliente);%>
   </div>
   <div id="start" class="simpleCart_shelfItem addDemoAnimation">
 		<div class="tooltip">
-			<span class="item_price">$35.99</span>
+			<span class="item_price">$45.99</span>
  			<a class="item_add" href="javascript:;"> Add to Cart </a>
 		</div>
 	<img height="50%" src='imagens/camisa1.jpg'  alt="Sample Product" class="item_image item_add"/>
@@ -87,7 +96,7 @@ session.getAttribute(cliente);%>
 	<p>Funcionario:  <%=user%>   <p>
 	<p>Cliente:  <%=cliente%>   <p>
 	<span class="simpleCart_quantity"></span> items - <span class="simpleCart_total"></span>
-	<a id="cancela_compra" href="home.html">Cancelar compra</a>
+	<span class="simpleCart_items"></span>
 	<a id="logout" href="login.jsp">logout</a>
 	</div>
 </body>

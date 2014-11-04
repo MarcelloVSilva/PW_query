@@ -3,6 +3,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
@@ -12,34 +14,79 @@
 
 
 </head>
-<body style="background-image: url('imagens/moca.jpg');">
+<body style="background-image: url('imagenss/moca.jpg');">
 <!--Aqui está o codigo java que pega a sessao contendo o nome do funcionario logado-->
 <%
 String user=(String) session.getAttribute("user");
 session.getAttribute(user);
 String cliente=(String) session.getAttribute("cliente");
 session.getAttribute(cliente);%>
+
+<script src="simpleCart.js"></script>
+
+
 <div id="start">
-	<img height="50%" src='imagens/camisa1.jpg' draggable="true"/>
-	<label>49,90</label>
-	<img height="50%" src='imagens/camisa2.jpg' draggable="true"/>
-	<label>49,90</label>
-	<img height="50%" src='imagens/camisa1.jpg' draggable="true"/>
-	<label>49,90</label>
-	<img height="50%" src='imagens/camisa2.jpg' draggable="true"/>
-	<label>49,90</label>
-	<img height="50%" src='imagens/camisa2.jpg' draggable="true"/>
-	<label>49,90</label>
-	<img height="50%" src='imagens/camisa1.jpg' draggable="true"/>
-	<label>49,90</label>
-	<img height="50%" src='imagens/camisa2.jpg' draggable="true"/>
-	<label>49,90</label>
-	<img height="50%" src='imagens/camisa1.jpg' draggable="true"/>
-	<label>49,90</label>
+	<div id="start" class="simpleCart_shelfItem addDemoAnimation">
+		<div class="tooltip">
+			<span class="item_price">$35.99</span>
+ 			<a class="item_add" href="javascript:;"> Add to Cart </a>
+		</div>
+	<img height="50%" src='imagens/camisa2.jpg'  alt="Sample Product" class="item_image item_add"/>
+  	<span class="item_name"></span>
+  </div>
+  <div id="start" class="simpleCart_shelfItem addDemoAnimation">
+		<div class="tooltip">
+			<span class="item_price">$35.99</span>
+ 			<a class="item_add" href="javascript:;"> Add to Cart </a>
+		</div>
+	<img height="50%" src='imagens/camisa1.jpg'  alt="Sample Product" class="item_image item_add"/>
+  	<span class="item_name"></span>
+  </div>
+  <div id="start" class="simpleCart_shelfItem addDemoAnimation">
+		<div class="tooltip">
+			<span class="item_price">$35.99</span>
+ 			<a class="item_add" href="javascript:;"> Add to Cart </a>
+		</div>
+	<img height="50%" src='imagens/camisa2.jpg'  alt="Sample Product" class="item_image item_add"/>
+  	<span class="item_name"></span>
+  </div>
+  <div id="start" class="simpleCart_shelfItem addDemoAnimation">
+		<div class="tooltip">
+			<span class="item_price">$35.99</span>
+ 			<a class="item_add" href="javascript:;"> Add to Cart </a>
+		</div>
+	<img height="50%" src='imagens/camisa1.jpg'  alt="Sample Product" class="item_image item_add"/>
+  	<span class="item_name"></span>
+  </div>
+  <div id="start" class="simpleCart_shelfItem addDemoAnimation">
+		<div class="tooltip">
+			<span class="item_price">$35.99</span>
+ 			<a class="item_add" href="javascript:;"> Add to Cart </a>
+		</div>
+	<img height="50%" src='imagens/camisa2.jpg'  alt="Sample Product" class="item_image item_add"/>
+  	<span class="item_name"></span>
+  </div>
+  <div id="start" class="simpleCart_shelfItem addDemoAnimation">
+		<div class="tooltip">
+			<span class="item_price">$35.99</span>
+ 			<a class="item_add" href="javascript:;"> Add to Cart </a>
+		</div>
+	<img height="50%" src='imagens/camisa1.jpg'  alt="Sample Product" class="item_image item_add"/>
+  	<span class="item_name"></span>
+  </div>
+  <div id="start" class="simpleCart_shelfItem addDemoAnimation">
+		<div class="tooltip">
+			<span class="item_price">$35.99</span>
+ 			<a class="item_add" href="javascript:;"> Add to Cart </a>
+		</div>
+	<img height="50%" src='imagens/camisa2.jpg'  alt="Sample Product" class="item_image item_add"/>
+  	<span class="item_name"></span>
+  </div>
 	</div>
 	<div id="carrinho">
 	<p>Funcionario:  <%=user%>   <p>
 	<p>Cliente:  <%=cliente%>   <p>
+	<span class="simpleCart_quantity"></span> items - <span class="simpleCart_total"></span>
 	<a id="cancela_compra" href="home.html">Cancelar compra</a>
 	<a id="logout" href="login.jsp">logout</a>
 	</div>

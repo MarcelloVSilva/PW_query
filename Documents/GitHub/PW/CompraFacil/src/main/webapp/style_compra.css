@@ -32,3 +32,15 @@ body{
 	float: right;
 	margin-bottom: 0px;
 }
+.tooltip {
+	position: absolute;
+	/*width: 144px;*/
+	/*height: 41px;*/
+	background: url("http://www.euescolhicristo.com/wp-content/uploads/2014/04/finalfinal.jpg");
+	top: -30px;
+	left: 50%;
+	margin-left: -71px;
+	display: none;
+	padding-top: 2px;
+	z-index: 100;
+}

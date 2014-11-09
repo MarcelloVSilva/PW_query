@@ -9,6 +9,10 @@ body{
 	width:77%;
 	background-color:white;
 }
+#start.simpleCart_shelfItem{
+	height:100px;
+	width:100px;
+}
 #carrinho{
 	float: left;
 	margin-top:150px;

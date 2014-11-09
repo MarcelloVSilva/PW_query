@@ -23,28 +23,34 @@ public class Login extends HttpServlet {
 		String usuario = request.getParameter("user");
 		String senha = request.getParameter("senha");
 		
-		Boolean login = validaLogin(usuario, senha);
+		String login = validaLogin(usuario, senha);
 		//*************** teste sessão *****************
 		// Armazena o nome do funcionario logado
 		 
 		HttpSession session=request.getSession(true);
 		session.setAttribute("user",usuario);
 		//***************fim sessão **********************
-		if(!login){
-			request.setAttribute("falha", "Usu�rio e/ou senha incorretos");
+		if(login.equals("err")){
+			request.setAttribute("falha", "Usuario e/ou senha incorretos");
 			request.getRequestDispatcher("login.jsp").forward(request, response);
 			
 		}
-		else
+		else if(login.equals("func")){
 			request.getRequestDispatcher("home.html").forward(request, response);
+		}
+		else if(login.equals("admin")){
+			request.getRequestDispatcher("homeAdm.jsp").forward(request, response);
+		}
 	}
 	
-	public boolean validaLogin(String user, String senha){
+	public String validaLogin(String user, String senha){
 		if(user.equals("func") && senha.equals("func")){
-			return true;
+			return "func";
 		}
-		else
-			return false;
+		else if(user.equals("admin") && senha.equals("admin123")){
+			return "admin";
+		}
+			return "err";
 
 	}
 

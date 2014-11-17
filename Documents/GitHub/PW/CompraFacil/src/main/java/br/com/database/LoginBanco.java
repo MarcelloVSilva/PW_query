@@ -2,40 +2,37 @@ package br.com.database;
 
 
 
+import java.sql.Connection;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 
 import br.com.modelo.LoginVerifica;
 
 
 public class LoginBanco {
-
-	MetodosBanco banco = new MetodosBanco();
-		
+	
 	public boolean verificar(LoginVerifica verifica) {
-	    String sql = "SELECT usuario,senha,tipo FROM usuario";
-	    boolean resultado = false;
-	    ResultSet teste;
+		
+		MetodosBanco banco = new MetodosBanco();
+		boolean resultado = false;
+	    ResultSet sql;
+	    
 	    try {
 	        
-	    	
-	    	
-	    	teste = banco.criaSentenca();
+	    	sql = banco.verificaLoguin();
 			
-			while (teste.next()){
-				
-				if(teste.getString("usuario").equals(verifica.getLogin()) && teste.getString("senha").equals(verifica.getSenha())){
+	    	while (sql.next()) {
+				if(sql.getString("usuario").equals(verifica.getLogin()) && sql.getString("senha").equals(verifica.getSenha())){
 					resultado = true;
 					break;
 				}else
 				{
-					resultado = true;
+					resultado = false;
 				}
 				
 			}
 				
 	}catch (Exception  e){
-		System.out.println("Erro na Consulta" + e);
+		System.out.println("Erro na verificacao" + e);
 		
 	}
 	return resultado;

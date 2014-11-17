@@ -49,8 +49,6 @@ public class MetodosBanco {
 		}
 	}
 	
-	
-
 	public void fecharConexaoComOBancoDeDados() {
 		System.out.println("  Fechando conexão com o banco de dados...");
 		try {
@@ -61,20 +59,21 @@ public class MetodosBanco {
 			throw new RuntimeException("Erro ao fechar conexão com o banco de dados.", e);
 		}
 	}
-	
-	public ResultSet  criaSentenca() {
+
+	public ResultSet verificaLoguin(){
 		String sql = "select usuario, senha from usuario";
-			try {
-				
-				ResultSet rs = conexao.createStatement().executeQuery(sql); // criando instancia do banco, para execução
-				
-	        return rs;
-	        
+		ResultSet rs;
+		try {
+			
+			
+			 rs = conexao.createStatement().executeQuery(sql); // criando instancia do banco, para execução
+			
+			
 		} catch(Exception e) {
-			throw new RuntimeException("Erro ao criar a sentença.", e);
+			throw new RuntimeException("erro na consulta.", e);	
 		}
+		return rs;
 	}
-	
 	
 	
 	

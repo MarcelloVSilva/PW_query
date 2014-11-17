@@ -26,7 +26,7 @@
       <div style="background-color: #CD5C5C;" class="modal-body">
           <form action="logado" method="post" class="form col-md-12 center-block">
             <div class="form-group">
-              <input name="user" type="text" class="form-control input-lg" placeholder="Usuario">
+              <input name="usuario" type="text" class="form-control input-lg" placeholder="Usuario">
             </div>
             <div class="form-group">
               <input name="senha" type="password" class="form-control input-lg" placeholder="Senha">

@@ -1,6 +1,7 @@
 package br.com.database;
 
 import java.sql.Connection;
+import java.sql.ResultSet;
 
 public class TabelasBanco {
 		
@@ -48,4 +49,28 @@ public class TabelasBanco {
 			}
 
 		}
+		
+		public void mostrarAdm() {
+			System.out.println("  Mostrando adm...");
+			String sql = "select usuario, senha from usuario";
+			try {
+				
+				
+				ResultSet rs = conexao.createStatement().executeQuery(sql); // criando instancia do banco, para execução
+				
+				
+				while (rs.next()) {
+					String usuario = rs.getString("usuario");
+					String senha = rs.getString("senha");
+					
+					System.out.println("    " + usuario + 
+									   " - " + senha);
+					
+					
+				}
+				
+			} catch(Exception e) {
+				throw new RuntimeException("Erro ao mostrar os usuários da tabela.", e);
+			}
+		}		
 }

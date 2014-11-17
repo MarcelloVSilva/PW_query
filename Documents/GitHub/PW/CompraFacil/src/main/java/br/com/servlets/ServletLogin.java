@@ -29,14 +29,23 @@ public class ServletLogin extends HttpServlet {
 
 		LoginBanco verifica = new LoginBanco();
 		LoginVerifica login = new LoginVerifica();
-		TabelasBanco banco = new TabelasBanco();
-		banco.obterConexaoComOBancoDeDados();
-		banco.criarTabelaDeUsuario();
-		banco.incluirAdm();
+		TabelasBanco iniciarbanco = new TabelasBanco();
+		
+		// iniciando banco de dados e gerando tabela e login de adm
+		iniciarbanco.obterConexaoComOBancoDeDados();
+		iniciarbanco.criarTabelaDeUsuario();
+		iniciarbanco.incluirAdm();
+		iniciarbanco.mostrarAdm();
+		//
+		
 		login.setLogin(request.getParameter("usuario"));
 		login.setSenha(request.getParameter("senha"));
 		
-		if (verifica.verificar(login) == true ){
+		request
+		.getRequestDispatcher("formPedido.jsp")
+		.forward(request, response);
+		
+		/*if (verifica.verificar(login) == true ){
 			
 			
 			request
@@ -50,7 +59,7 @@ public class ServletLogin extends HttpServlet {
 			.forward(request, response);
 		}
          
-        
+        */
         
 	}
 

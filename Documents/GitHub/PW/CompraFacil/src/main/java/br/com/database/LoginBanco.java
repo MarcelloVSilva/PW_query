@@ -20,7 +20,7 @@ public class LoginBanco {
 	        
 	    	
 	    	
-	    	teste = banco.criaSentenca(sql);
+	    	teste = banco.criaSentenca();
 			
 			while (teste.next()){
 				

@@ -62,11 +62,11 @@ public class MetodosBanco {
 		}
 	}
 	
-	public ResultSet  criaSentenca(String SQL) {
-		
+	public ResultSet  criaSentenca() {
+		String sql = "select usuario, senha from usuario";
 			try {
 				
-				ResultSet rs = conexao.createStatement().executeQuery(SQL); // criando instancia do banco, para execução
+				ResultSet rs = conexao.createStatement().executeQuery(sql); // criando instancia do banco, para execução
 				
 	        return rs;
 	        

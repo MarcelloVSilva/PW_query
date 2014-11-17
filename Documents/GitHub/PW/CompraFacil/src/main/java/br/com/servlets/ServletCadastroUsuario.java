@@ -9,25 +9,31 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-@WebServlet("/pedido")
-public class CadastroPedido extends HttpServlet {
+import br.com.database.MetodosBanco;
+
+@WebServlet("/cadastro_usuario")
+public class ServletCadastroUsuario extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
+   
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 	}
 
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String usuario = request.getParameter("username");
+		String senha = request.getParameter("password");
+		MetodosBanco banco = new MetodosBanco();
+	//	banco.obterConexaoComOBancoDeDados();
+	//	banco.criarTabelaDeUsuario();
+		banco.incluirUsuarios(usuario,senha);
+		banco.mostrarUsuarios();
+		banco.fecharConexaoComOBancoDeDados();
 		
-		String cliente = request.getParameter("cliente");
-		// sessao cliente
-		HttpSession session=request.getSession(true);
-		session.setAttribute("cliente",cliente);
 		
-		
-		if(!cliente.equals("")){
-			request.getRequestDispatcher("Compra.jsp").forward(request, response);
-		}  
+		request.getRequestDispatcher("homeAdm.jsp").forward(request, response);
 	}
+	
 
 }

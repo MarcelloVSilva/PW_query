@@ -73,4 +73,23 @@ public class TabelasBanco {
 				throw new RuntimeException("Erro ao mostrar os usuários da tabela.", e);
 			}
 		}		
+		
+		
+		public ResultSet verificaLoguin(){
+			String sql = "select usuario, senha from usuario";
+			ResultSet rs;
+			try {
+				
+				
+				 rs = conexao.createStatement().executeQuery(sql); // criando instancia do banco, para execução
+				
+				
+			} catch(Exception e) {
+				throw new RuntimeException("erro na consulta.", e);	
+			}
+			return rs;
+		}
+		
+		
+		
 }

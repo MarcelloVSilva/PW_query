@@ -36,16 +36,23 @@ public class ServletLogin extends HttpServlet {
 		iniciarbanco.criarTabelaDeUsuario();
 		iniciarbanco.incluirAdm();
 		iniciarbanco.mostrarAdm();
+		java.sql.ResultSet teste = iniciarbanco.verificaLoguin();
+		System.out.println("Deu");
 		//
 		
 		login.setLogin(request.getParameter("usuario"));
 		login.setSenha(request.getParameter("senha"));
 		
-		request
-		.getRequestDispatcher("formPedido.jsp")
-		.forward(request, response);
+		//request
+		//.getRequestDispatcher("formPedido.jsp")
+		//.forward(request, response);
 		
-		/*if (verifica.verificar(login) == true ){
+		try{
+			
+		while(teste.next()){
+			
+		if ( teste.getString("usuario").equals(login.getLogin()) && teste.getString("senha").equals(login.getSenha())){
+			
 			
 			
 			request
@@ -53,13 +60,19 @@ public class ServletLogin extends HttpServlet {
 			.forward(request, response);
 	         
 		}else{
+		
 			
 			request
 			.getRequestDispatcher("login.jsp")
 			.forward(request, response);
 		}
+		
+
+		}
+		}catch(Exception e){
+			System.out.println(e);
+			}
          
-        */
         
 	}
 

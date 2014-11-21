@@ -29,7 +29,6 @@ public class ServletCadastroUsuario extends HttpServlet {
 	//	banco.criarTabelaDeUsuario();
 		banco.incluirUsuarios(usuario,senha);
 		banco.mostrarUsuarios();
-		banco.fecharConexaoComOBancoDeDados();
 		
 		
 		request.getRequestDispatcher("homeAdm.jsp").forward(request, response);

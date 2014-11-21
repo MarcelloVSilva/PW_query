@@ -1,24 +1,21 @@
 package br.com.database;
 
 
-import java.sql.Connection;
 import java.sql.ResultSet;
 
 /**
  * Classe para testes com um banco de dados.
  *
- * @author Walison
+ * @author Grupo
  */
 public class MetodosBanco {
 	
-	//Referência para uma conexão com o banco de dados.
-	private Connection conexao;
-	
+	ConexaoBanco connection = new ConexaoBanco();
 	public void incluirUsuarios(String usuario, String senha) {
 		System.out.println("  Incluindo usuários...");
 		String sql = "insert into usuario (usuario, senha) values ('"+usuario+"', '"+usuario+"')";
 		try {
-			conexao.createStatement().execute(sql);  // criando instancia do banco, para execução
+			connection.conexao.createStatement().execute(sql);  // criando instancia do banco, para execução
 		} catch(Exception e) {
 			throw new RuntimeException("Erro ao incluir o Usuario 1.", e);
 		}
@@ -31,7 +28,7 @@ public class MetodosBanco {
 		try {
 			
 			
-			ResultSet rs = conexao.createStatement().executeQuery(sql); // criando instancia do banco, para execução
+			ResultSet rs = connection.conexao.createStatement().executeQuery(sql); // criando instancia do banco, para execução
 			
 			
 			while (rs.next()) {
@@ -49,24 +46,13 @@ public class MetodosBanco {
 		}
 	}
 	
-	public void fecharConexaoComOBancoDeDados() {
-		System.out.println("  Fechando conexão com o banco de dados...");
-		try {
-
-			conexao.close();
-			
-		} catch(Exception e) {
-			throw new RuntimeException("Erro ao fechar conexão com o banco de dados.", e);
-		}
-	}
-
 	public ResultSet verificaLoguin(){
 		String sql = "select usuario, senha from usuario";
 		ResultSet rs;
 		try {
 			
 			
-			 rs = conexao.createStatement().executeQuery(sql); // criando instancia do banco, para execução
+			 rs = connection.conexao.createStatement().executeQuery(sql); // criando instancia do banco, para execução
 			
 			
 		} catch(Exception e) {

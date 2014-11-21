@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import br.com.database.ConexaoBanco;
 import br.com.database.LoginBanco;
 import br.com.database.MetodosBanco;
 import br.com.database.TabelasBanco;
@@ -32,12 +33,10 @@ public class ServletLogin extends HttpServlet {
 		TabelasBanco iniciarbanco = new TabelasBanco();
 		
 		// iniciando banco de dados e gerando tabela e login de adm
-		iniciarbanco.obterConexaoComOBancoDeDados();
 		iniciarbanco.criarTabelaDeUsuario();
 		iniciarbanco.incluirAdm();
 		iniciarbanco.mostrarAdm();
 		java.sql.ResultSet teste = iniciarbanco.verificaLoguin();
-		System.out.println("Deu");
 		//
 		
 		login.setLogin(request.getParameter("usuario"));
@@ -51,7 +50,12 @@ public class ServletLogin extends HttpServlet {
 			
 		while(teste.next()){
 			
-		if ( teste.getString("usuario").equals(login.getLogin()) && teste.getString("senha").equals(login.getSenha())){
+		if(teste.getString("usuario").equals("admin") && teste.getString("senha").equals("admin")){
+			
+			request
+			.getRequestDispatcher("homeAdm.jsp")
+			.forward(request, response);
+		}else if ( teste.getString("usuario").equals(login.getLogin()) && teste.getString("senha").equals(login.getSenha())){
 			
 			
 			
@@ -59,7 +63,9 @@ public class ServletLogin extends HttpServlet {
 			.getRequestDispatcher("formPedido.jsp")
 			.forward(request, response);
 	         
-		}else{
+		}
+		
+		else{
 		
 			
 			request

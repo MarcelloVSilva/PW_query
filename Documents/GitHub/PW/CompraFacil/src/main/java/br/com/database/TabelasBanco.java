@@ -1,13 +1,15 @@
 package br.com.database;
 
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class TabelasBanco {
 		
 		//Referência para uma conexão com o banco de dados.
 		ConexaoBanco connection = new ConexaoBanco();
+		int cont_inicio;
 		
-		public void criarTabelaDeUsuario() {
+		public Boolean criarTabelaDeUsuario() {
 			System.out.println("  Criando tabela de usuário...");
 			String sql = "" +
 			"create table usuario (" +
@@ -19,16 +21,25 @@ public class TabelasBanco {
 			try { 
 				
 				connection.conexao.createStatement().execute(sql); // criando instancia do banco, para execução 
-				
-			} catch(Exception e) {
-
-				throw new RuntimeException("Erro ao criar a tabela de usuário.", e);
+				return true;
+			} catch(SQLException e) {
+				return isExistTable(e);
 			}
+		}
+		
+		public Boolean isExistTable(SQLException erro){
+			Boolean exists = false;
+	        if(erro.getSQLState().equals("X0Y32")) {
+	            exists = false;
+	        } else {
+	            exists = true;
+	        }
+			return exists;
 		}
 		
 		public void incluirAdm() {
 			System.out.println("  Incluindo admin...");
-			String sql = "insert into usuario (usuario, senha) values ('admin', 'admin')";
+			String sql = "insert into usuario (usuario, senha, tipo) values ('admin', 'admin', 'admin')";
 			try {
 				connection.conexao.createStatement().execute(sql);  // criando instancia do banco, para execução
 			} catch(Exception e) {
@@ -62,7 +73,7 @@ public class TabelasBanco {
 		}		
 
 		public ResultSet verificaLoguin(){
-			String sql = "select usuario, senha from usuario";
+			String sql = "select usuario, senha,tipo from usuario";
 			ResultSet rs;
 			try {
 				
@@ -76,6 +87,12 @@ public class TabelasBanco {
 			return rs;
 		}
 		
-		
-		
+		/*public void executa(){
+			if(cont_inicio==0){
+					criarTabelaDeUsuario();
+					incluirAdm();
+					mostrarAdm();
+					cont_inicio=1;
+			}
+		}*/
 }

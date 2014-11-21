@@ -2,6 +2,7 @@ package br.com.servlets;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -29,11 +30,14 @@ public class ServletLogin extends HttpServlet {
 
 		LoginVerifica login = new LoginVerifica();
 		TabelasBanco iniciarbanco = new TabelasBanco();
+		if(iniciarbanco.criarTabelaDeUsuario()){
+			iniciarbanco.criarTabelaDeUsuario();
+			iniciarbanco.incluirAdm();
+			iniciarbanco.mostrarAdm();
+		}
 		
 		// iniciando banco de dados e gerando tabela e login de adm
-		iniciarbanco.criarTabelaDeUsuario();
-		iniciarbanco.incluirAdm();
-		iniciarbanco.mostrarAdm();
+		
 		java.sql.ResultSet teste = iniciarbanco.verificaLoguin();
 		//
 		
@@ -48,31 +52,25 @@ public class ServletLogin extends HttpServlet {
 			
 		while(teste.next()){
 			
-		if(teste.getString("usuario").equals("admin") && teste.getString("senha").equals("admin")){
+		System.out.println(	teste.getString("usuario") );
+		System.out.println(	teste.getString("senha") );
+		if(teste.getString("usuario").equals(login.getLogin()) && teste.getString("senha").equals(login.getSenha()) && teste.getString("tipo").equals(login.getTipo())){
 			
 			request
 			.getRequestDispatcher("homeAdm.jsp")
 			.forward(request, response);
-		}else if ( teste.getString("usuario").equals(login.getLogin()) && teste.getString("senha").equals(login.getSenha())){
-			
-			
-			
-			request
-			.getRequestDispatcher("formPedido.jsp")
-			.forward(request, response);
-	         
 		}
 		
 		else{
-		
+			
 			
 			request
-			.getRequestDispatcher("login.jsp")
+			.getRequestDispatcher("home.html")
 			.forward(request, response);
-		}
 		
+		 }
 
-		}
+			}
 		}catch(Exception e){
 			System.out.println(e);
 			}

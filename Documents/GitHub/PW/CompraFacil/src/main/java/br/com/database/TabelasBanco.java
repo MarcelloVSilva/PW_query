@@ -21,13 +21,14 @@ public class TabelasBanco {
 				connection.conexao.createStatement().execute(sql); // criando instancia do banco, para execução 
 				
 			} catch(Exception e) {
+
 				throw new RuntimeException("Erro ao criar a tabela de usuário.", e);
 			}
 		}
 		
 		public void incluirAdm() {
 			System.out.println("  Incluindo admin...");
-			String sql = "insert into usuario (usuario, senha, tipo) values ('admin', 'admin', 'admin')";
+			String sql = "insert into usuario (usuario, senha) values ('admin', 'admin')";
 			try {
 				connection.conexao.createStatement().execute(sql);  // criando instancia do banco, para execução
 			} catch(Exception e) {

@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import br.com.database.ConexaoBanco;
-import br.com.database.LoginBanco;
 import br.com.database.MetodosBanco;
 import br.com.database.TabelasBanco;
 import br.com.modelo.LoginVerifica;
@@ -28,7 +27,6 @@ public class ServletLogin extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 
-		LoginBanco verifica = new LoginBanco();
 		LoginVerifica login = new LoginVerifica();
 		TabelasBanco iniciarbanco = new TabelasBanco();
 		

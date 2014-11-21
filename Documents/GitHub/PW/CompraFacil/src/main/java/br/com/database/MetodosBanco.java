@@ -13,7 +13,7 @@ public class MetodosBanco {
 	ConexaoBanco connection = new ConexaoBanco();
 	public void incluirUsuarios(String usuario, String senha) {
 		System.out.println("  Incluindo usuários...");
-		String sql = "insert into usuario (usuario, senha) values ('"+usuario+"', '"+usuario+"')";
+		String sql = "insert into usuario (usuario, senha) values ('"+usuario+"', '"+senha+"')";
 		try {
 			connection.conexao.createStatement().execute(sql);  // criando instancia do banco, para execução
 		} catch(Exception e) {

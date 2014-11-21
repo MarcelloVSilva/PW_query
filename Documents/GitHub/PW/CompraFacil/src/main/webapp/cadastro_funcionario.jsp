@@ -24,7 +24,6 @@
     <label>Password</label>
     <input type="password" name="password" class="span3">
     <label><input type="checkbox" name="terms"> Estou ciente da criação do novo funcionário .</label>
-    <input type="submit" value="Sign up" class="btn btn-primary pull-right">
      <button class="btn btn-primary btn-lg btn-block">Sign In</button>
     <div class="clearfix"></div>
     </form>

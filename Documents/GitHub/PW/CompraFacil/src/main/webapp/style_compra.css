@@ -3,10 +3,11 @@ body{
 	background-color:#CD5C5C;
 }
 #start{
+	border: 2px solid;
 	float: left;
 	margin-top:150px;
 	height:400px;
-	width:77%;
+	width:75%;
 	background-color:white;
 }
 #start.simpleCart_shelfItem{
@@ -14,6 +15,7 @@ body{
 	width:100px;
 }
 #carrinho{
+	border: 2px solid;
 	float: left;
 	margin-top:150px;
 	margin-left:5px;

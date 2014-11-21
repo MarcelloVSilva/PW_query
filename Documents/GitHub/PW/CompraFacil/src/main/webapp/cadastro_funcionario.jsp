@@ -6,24 +6,24 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="style_pedido.css">
+<link rel="stylesheet" href="style_cadastroFunc.css">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Cadastrar novo funcionario</title>
 </head>
 <body style="background-image: url('imagens/moca.jpg');">
-	<a id="logout" href="login.jsp">logout</a>
+	
 	<div id="start">
-	<h2>Sign Up</h2>
-    <form action="cadastro_usuario" method="post">
-    <label>First Name</label>
-    <input type="text" name="firstname" class="span3">
-    <label>Last Name</label>
-    <input type="text" name="lastname" class="span3">
-    <label>Username</label>
-    <input type="text" name="username" class="span3">
-    <label>Password</label>
-    <input type="password" name="password" class="span3">
-    <label><input type="checkbox" name="terms"> Estou ciente da criação do novo funcionário .</label>
+	<a id="logout" href="login.jsp">logout</a>
+		<h style="margin-left: 500px; font-size: 20px;">Novo Funcionário</h>
+    		<form action="cadastro_usuario" method="post" id="form">
+    	<label>First Name</label>
+    		<input type="text" class="form-control focus" name="firstname" class="span3">
+    	<label>Last Name</label>
+    		<input type="text" class="form-control focus" name="lastname" class="span3">
+    	<label>Username*</label>
+    		<input type="text" class="form-control focus" name="username" class="span3">
+    	<label>Password*</label>
+    		<input type="password" class="form-control focus" name="password" class="span3"></br>
      <button class="btn btn-primary btn-lg btn-block">Sign In</button>
     <div class="clearfix"></div>
     </form>

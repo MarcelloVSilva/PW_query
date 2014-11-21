@@ -14,7 +14,7 @@
 	<a id="logout" href="login.jsp">logout</a>
 	<div id="start">
 	<form id="form">
-		<a  href="cadastro_funcionario.jsp" style="float: left;" class="btn btn-default">Novo funcionário</a>
+		<a  href="cadastro_funcionario.jsp" style="float: left; margin-left: 30px;" class="btn btn-default">Novo funcionário</a>
 		<a href="novoProduto.jsp"  style="float: left;" class="btn btn-default">Novo produto</a>
 	</form>
 	

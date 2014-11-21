@@ -56,7 +56,7 @@ session.getAttribute(cliente);%>
 			<span class="item_price">$35.99</span>
  			<a class="item_add" href="javascript:;"> Add to Cart </a>
 		</div>
-	<img style="height:100px; width:100px;" src='imagens/camisa2.jpg'  alt="Sample Product" class="item_image item_add"/>
+	<img style="height:100px; width:100px;" src='imagens/camisa3.jpg'  alt="Sample Product" class="item_image item_add"/>
   	<span class="item_name"></span>
   </div>
   <div id="start" class="simpleCart_shelfItem addDemoAnimation">
@@ -64,7 +64,7 @@ session.getAttribute(cliente);%>
 			<span class="item_price">$45.99</span>
  			<a class="item_add" href="javascript:;"> Add to Cart </a>
 		</div>
-	<img style="height:100px; width:100px;" src='imagens/camisa1.jpg'  alt="Sample Product" class="item_image item_add"/>
+	<img style="height:100px; width:100px;" src='imagens/camisa4.jpg'  alt="Sample Product" class="item_image item_add"/>
   	<span class="item_name"></span>
   </div>
   <div id="start" class="simpleCart_shelfItem addDemoAnimation">
@@ -88,7 +88,7 @@ session.getAttribute(cliente);%>
 			<span class="item_price">$35.99</span>
  			<a class="item_add" href="javascript:;"> Add to Cart </a>
 		</div>
-	<img style="height:100px; width:100px;" src='imagens/camisa2.jpg'  alt="Sample Product" class="item_image item_add"/>
+	<img style="height:100px; width:100px;" src='imagens/camisa3.jpg'  alt="Sample Product" class="item_image item_add"/>
   	<span class="item_name"></span>
   </div>
 	</div>
@@ -97,7 +97,8 @@ session.getAttribute(cliente);%>
 	<p>Cliente:  <%=cliente%>   <p>
 	<span class="simpleCart_quantity"></span> items - <span class="simpleCart_total"></span>
 	<span class="simpleCart_items"></span>
-	<a id="logout" href="login.jsp">logout</a>
+	
 	</div>
+	<a id="logout" href="login.jsp">logout</a>
 </body>
 </html>

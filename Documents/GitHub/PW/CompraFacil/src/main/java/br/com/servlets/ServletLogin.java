@@ -49,35 +49,17 @@ public class ServletLogin extends HttpServlet {
 		while(teste.next()){
 			
 		if(teste.getString("usuario").equals("admin") && teste.getString("senha").equals("admin")){
-			
-			request
-			.getRequestDispatcher("homeAdm.jsp")
-			.forward(request, response);
+			request.getRequestDispatcher("homeAdm.jsp").forward(request, response);
 		}else if ( teste.getString("usuario").equals(login.getLogin()) && teste.getString("senha").equals(login.getSenha())){
-			
-			
-			
-			request
-			.getRequestDispatcher("formPedido.jsp")
-			.forward(request, response);
-	         
+			request.getRequestDispatcher("formPedido.jsp").forward(request, response);
 		}
-		
 		else{
-		
-			
-			request
-			.getRequestDispatcher("login.jsp")
-			.forward(request, response);
+			request.getRequestDispatcher("login.jsp").forward(request, response);
 		}
-		
-
 		}
 		}catch(Exception e){
 			System.out.println(e);
 			}
-         
-        
 	}
 
 }
